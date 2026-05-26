@@ -7,29 +7,50 @@
       name="description"
       content="Project page for a research paper on phoneme-level control."
     >
-    <meta property="og:title" content="Phoneme Control">
+    <meta
+      property="og:title"
+      content="Pronouncing Hard Words: Phoneme adaptation of a Pretrained Large Language Model-Based Speech Synthesis Model"
+    >
     <meta
       property="og:description"
       content="Research project page for phoneme-level control."
     >
     <meta property="og:type" content="website">
-    <title>Phoneme Control</title>
+    <title>Pronouncing Hard Words</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
       <section class="hero">
-        <h1>Phoneme-Level Control for Speech Generation</h1>
+        <h1>
+          Pronouncing Hard Words: Phoneme adaptation of a Pretrained Large
+          Language Model-Based Speech Synthesis Model
+        </h1>
       </section>
 
       <section class="content-section" id="abstract">
         <div class="section-kicker">Abstract</div>
-        <h2>Controllable speech through phoneme-aware modeling</h2>
         <p>
-          Replace this paragraph with the paper abstract. Summarize the core
-          problem, the phoneme-level controls introduced by the work, and the
-          main empirical findings. Keep this section concise so visitors can
-          quickly understand the contribution.
+          Modern end-to-end text-to-speech (TTS) systems produce natural and
+          expressive speech, but explicit pronunciation control remains difficult
+          for out-of-vocabulary words, named entities, and other
+          pronunciation-sensitive spans. We study a general adaptation recipe for
+          adding phoneme controllability to a pretrained LLM-based TTS model
+          without retraining from scratch. The recipe extends the text vocabulary
+          with ARPAbet special tokens, performs continued supervised fine-tuning
+          on phoneme-augmented data, and applies pronunciation-focused direct
+          preference optimization (DPO) with a frame mask centered on the
+          forced-aligned target entity. The adapted model supports both
+          phoneme-only prompts and hybrid prompts in which local phoneme spans
+          are embedded inside ordinary text. On held-out drug names excluded from
+          DPO preference construction, supervised phoneme adaptation achieves a
+          20.96% entity-span phoneme error rate, and DPO with SFT replay
+          improves this to 11.53%. The final adapted model also outperforms the
+          evaluated open- and closed-source TTS baselines on the
+          drug-pronunciation benchmark. Beyond pronunciation accuracy,
+          Seed-TTS-Eval performance is preserved, but DPO can shift speaking
+          rate and weaken expressive control, motivating evaluation of phoneme
+          adaptation as a multi-objective problem.
         </p>
       </section>
 

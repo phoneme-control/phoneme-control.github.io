@@ -65,8 +65,8 @@ h1 {
   margin-right: auto;
   margin-bottom: 22px;
   margin-left: auto;
-  font-size: clamp(2.75rem, 7vw, 5.8rem);
-  line-height: 0.95;
+  font-size: clamp(2.25rem, 5vw, 3.8rem);
+  line-height: 1.02;
   letter-spacing: -0.075em;
 }
 
