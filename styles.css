@@ -34,57 +34,16 @@ a {
   color: inherit;
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid rgb(226 215 200 / 72%);
-  background: rgb(255 250 242 / 86%);
-  backdrop-filter: blur(18px);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 18px 0;
-}
-
-.brand {
-  color: var(--ink);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: var(--accent-dark);
-}
-
 main {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 .hero {
-  padding: 96px 0 72px;
+  padding: 96px 0 56px;
   text-align: center;
 }
 
-.eyebrow,
 .section-kicker {
   margin: 0 0 12px;
   color: var(--accent-dark);
@@ -152,8 +111,7 @@ h3 {
   gap: 12px;
 }
 
-.button,
-.copy-button {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -170,15 +128,13 @@ h3 {
   text-decoration: none;
 }
 
-.button.primary,
-.copy-button {
+.button.primary {
   border-color: transparent;
   background: var(--accent);
   color: white;
 }
 
-.button:hover,
-.copy-button:hover {
+.button:hover {
   transform: translateY(-1px);
 }
 
@@ -194,28 +150,6 @@ h3 {
 .content-section p {
   color: var(--muted);
   font-size: 1.05rem;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-}
-
-.feature-card {
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  padding: 28px;
-}
-
-.feature-card h2 {
-  font-size: 1.45rem;
 }
 
 .sample-list {
@@ -244,21 +178,8 @@ audio {
   width: 100%;
 }
 
-pre {
-  overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: #211b16;
-  color: #fff7ed;
-  padding: 20px;
-}
-
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-}
-
-.copy-button {
-  margin-top: 12px;
 }
 
 .footer {
@@ -275,22 +196,10 @@ code {
 }
 
 @media (max-width: 780px) {
-  .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 10px 14px;
-  }
-
   .hero {
     padding-top: 64px;
   }
 
-  .feature-grid,
   .sample {
     grid-template-columns: 1fr;
   }
