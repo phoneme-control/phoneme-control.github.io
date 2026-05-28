@@ -98,27 +98,6 @@ h3 {
   font-size: 1.05rem;
 }
 
-.sample-list {
-  display: grid;
-  gap: 14px;
-  margin-top: 24px;
-}
-
-.sample {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
-  gap: 18px;
-  align-items: center;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: #fffdf8;
-  padding: 18px;
-}
-
-.sample p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
-}
 
 audio {
   width: 100%;
@@ -141,12 +120,216 @@ code {
   font-weight: 700;
 }
 
+/* Drug tabs */
+.drug-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.drug-tab {
+  padding: 10px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.drug-tab:hover {
+  background: var(--surface);
+}
+
+.drug-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Drug panel */
+.drug-sentence {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.drug-label {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 10px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+
+.drug-sentence q {
+  quotes: "\201C" "\201D";
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Reference */
+.reference-block {
+  margin-bottom: 28px;
+  padding: 16px;
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  background: rgb(124 58 237 / 4%);
+}
+
+.ref-label {
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.reference-block audio {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Group labels */
+.group-label {
+  margin: 24px 0 10px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Model cards */
+.model-card {
+  margin-bottom: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fffdf8;
+}
+
+.model-card.model-ours {
+  border-color: rgb(124 58 237 / 30%);
+  background: rgb(124 58 237 / 5%);
+}
+
+.model-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.model-name {
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.model-badge {
+  padding: 1px 8px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.model-avg {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.player-row {
+  margin-bottom: 10px;
+}
+
+.player-row audio {
+  width: 100%;
+}
+
+/* Sample buttons */
+.sample-btns {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.sample-btn {
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.sample-btn:hover {
+  background: var(--surface);
+}
+
+.sample-btn.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.sample-btn.score-good { color: #16a34a; }
+.sample-btn.score-ok   { color: #ca8a04; }
+.sample-btn.score-bad  { color: #dc2626; }
+.sample-btn.active.score-good { background: #16a34a; border-color: #16a34a; color: #fff; }
+.sample-btn.active.score-ok   { background: #ca8a04; border-color: #ca8a04; color: #fff; }
+.sample-btn.active.score-bad  { background: #dc2626; border-color: #dc2626; color: #fff; }
+
+/* Score + annotation */
+.sample-annotation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 24px;
+}
+
+.score-badge {
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.score-badge.score-good { background: #dcfce7; color: #15803d; }
+.score-badge.score-ok   { background: #fef9c3; color: #a16207; }
+.score-badge.score-bad  { background: #fee2e2; color: #b91c1c; }
+
+.heard-as {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 @media (max-width: 780px) {
   .hero {
     padding-top: 64px;
   }
 
-  .sample {
-    grid-template-columns: 1fr;
+  .drug-tabs {
+    flex-wrap: wrap;
   }
 }

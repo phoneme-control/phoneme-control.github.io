@@ -58,27 +58,19 @@
         <div class="section-kicker">Results</div>
         <h2>Audio Samples</h2>
         <p>
-          Add demos, spectrograms, or comparison tables here. The placeholders
-          below can be replaced with actual audio files in an <code>assets/</code>
-          directory.
+          We evaluate pronunciation accuracy on three held-out drug names.
+          For each drug, we show a human reference recording followed by
+          five generations from each model. Samples are scored 1&ndash;3
+          by a Gemini judge (3&nbsp;=&nbsp;correct).
         </p>
 
-        <div class="sample-list">
-          <div class="sample">
-            <div>
-              <h3>Baseline</h3>
-              <p>Placeholder for a baseline audio sample.</p>
-            </div>
-            <audio controls preload="none" aria-label="Baseline audio sample"></audio>
-          </div>
-          <div class="sample">
-            <div>
-              <h3>Phoneme-Controlled Output</h3>
-              <p>Placeholder for a controlled generation sample.</p>
-            </div>
-            <audio controls preload="none" aria-label="Controlled audio sample"></audio>
-          </div>
+        <div class="drug-tabs" role="tablist">
+          <button class="drug-tab active" role="tab" aria-selected="true" data-drug="pick1_suzetrigine">suzetrigine</button>
+          <button class="drug-tab" role="tab" aria-selected="false" data-drug="pick2_olumiant">Olumiant</button>
+          <button class="drug-tab" role="tab" aria-selected="false" data-drug="pick3_cyramza">Cyramza</button>
         </div>
+
+        <div class="drug-panels" id="drug-panels"></div>
       </section>
     </main>
 
@@ -88,5 +80,6 @@
         <a href="https://phoneme-control.github.io">phoneme-control.github.io</a>.
       </p>
     </footer>
+    <script src="demo.js"></script>
   </body>
 </html>
